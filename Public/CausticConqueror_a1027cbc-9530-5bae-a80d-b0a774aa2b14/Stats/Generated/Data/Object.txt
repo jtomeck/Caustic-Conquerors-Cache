@@ -1,0 +1,7 @@
+new entry "CC_Chest"
+type "Object"
+using "OBJ_Chest_Wood_Small"
+data "RootTemplate" "3ea77f9f-7d0c-4bc2-a697-8b2927a62d01"
+data "Rarity" "Legendary"
+data "Unique" "0"
+

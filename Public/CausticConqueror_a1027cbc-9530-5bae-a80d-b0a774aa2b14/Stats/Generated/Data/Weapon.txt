@@ -1,0 +1,10 @@
+new entry "CC_Quarterstaff"
+type "Weapon"
+using "MAG_PHB_PactKeeper_Quarterstaff"
+data "RootTemplate" "f28daced-4cdf-458f-937c-0aa062a61166"
+data "ValueUUID" "d24c441f-7ebe-4229-8522-cf34c257ff20"
+data "Rarity" "Legendary"
+data "Boosts" ""
+data "PassivesOnEquip" "CC_AcidSurface_Passive;CC_AcidSurface_Tech_Passive;CC_AcidProne_Passive;"
+data "Unique" "0"
+

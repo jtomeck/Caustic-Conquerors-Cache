@@ -1,0 +1,44 @@
+function HasDissolutionProtocolStatus(entity)
+    local entity = entity or context.Target
+    return HasAnyStatus({'CC_EXPOSURE','CC_CORROSION','CC_DISSOLUTION'}, {}, {}, entity)
+end
+
+function IsAcidPrimed(entity)
+    local entity = entity or context.Target
+    return ConditionResult(GetStatusDuration('CC_CHARGED_ACID', entity) > 6)
+end
+
+function IsAcidSpell()
+    return
+    SpellId('Target_GlyphOfWarding_Acid')
+    | SpellId('Target_GlyphOfWarding_Acid_4')
+    | SpellId('Target_GlyphOfWarding_Acid_5')
+    | SpellId('Target_GlyphOfWarding_Acid_6')
+    | SpellId('Projectile_AcidArrow')
+    | SpellId('Projectile_AcidArrow_3')
+    | SpellId('Projectile_AcidArrow_4')
+    | SpellId('Projectile_AcidArrow_5')
+    | SpellId('Projectile_AcidArrow_6')
+    | SpellId('Projectile_ChromaticOrb_Acid')
+    | SpellId('Projectile_ChromaticOrb_Acid_2')
+    | SpellId('Projectile_ChromaticOrb_Acid_3')
+    | SpellId('Projectile_ChromaticOrb_Acid_4')
+    | SpellId('Projectile_ChromaticOrb_Acid_5')
+    | SpellId('Projectile_ChromaticOrb_Acid_6')
+    | SpellId('Target_HungerOfHadar')
+    | SpellId('Target_HungerOfHadar_4')
+    | SpellId('Target_HungerOfHadar_5')
+    | SpellId('Target_HungerOfHadar_6')
+    | SpellId('Projectile_CC_AcidMissile')
+    | SpellId('Projectile_CC_AcidMissile_2')
+    | SpellId('Projectile_CC_AcidMissile_3')
+    | SpellId('Projectile_CC_AcidMissile_4')
+    | SpellId('Projectile_CC_AcidMissile_5')
+    | SpellId('Projectile_CC_AcidMissile_6')
+end
+
+function IsAcidSpellContainer()
+    return
+    SpellId('Target_GlyphOfWarding')
+    | SpellId('Projectile_ChromaticOrb')
+end

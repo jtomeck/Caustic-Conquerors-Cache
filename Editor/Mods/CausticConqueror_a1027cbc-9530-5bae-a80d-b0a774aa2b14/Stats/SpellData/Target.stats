@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e988a674-28fe-49d2-a6ce-c5c1e0141f4c">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="de29ed1a-4bdd-4a0f-b973-453189d11def" />
+        <field name="Name" type="NameTableFieldDefinition" value="Test_Dissolution" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="19696062-d315-4792-9159-26d485c30991" />
+        <field name="Level" type="IntegerTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" clear_inherited_value="true" value="" enumeration_type_name="SpellSchool" version="1" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(CC_DISSOLUTION,100, 1);" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="100" />
+        <field name="SpellRoll" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellFail" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="AmountOfTargets" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h0468abccg2911gcaa0gfacfg57b34e1b9837" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hbad958e5gdef9g8874gfb0cg1608300c93b6" version="1" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="CycleConditions" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="UseCosts" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" clear_inherited_value="true" value="" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="13a485c2-ea80-4ef6-b130-7acf3fa38a1e" />
+        <field name="Name" type="NameTableFieldDefinition" value="Test_Corrosion" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="de29ed1a-4bdd-4a0f-b973-453189d11def" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(CC_CORROSION,100, 1);" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h372a5184gdda2gfe7eg6ef8gb333210a7fe6" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hfcb11a51gc538gabb8g0febg84be56bf7452" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="61909b56-2e6a-44f6-93a5-dfcd7836a44f" />
+        <field name="Name" type="NameTableFieldDefinition" value="Test_Exposure" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="de29ed1a-4bdd-4a0f-b973-453189d11def" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(CC_EXPOSURE,100, 1);" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2ccae9bdgefa5g61a4gd7deg5d2aca981fa0" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0e5437fegbf07g95d3g83dfg8fd6be6b1ae2" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="bfcc5be7-db53-4128-9e61-32fab0dc428a" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_CatalyticRupture" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="19696062-d315-4792-9159-26d485c30991" />
+        <field name="Level" type="IntegerTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" clear_inherited_value="true" value="" enumeration_type_name="SpellSchool" version="1" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="18" />
+        <field name="DeathType" type="EnumerationTableFieldDefinition" value="Disintegrate" enumeration_type_name="Death Type" version="1" />
+        <field name="SpellRoll" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="ApplyStatus(CC_RUPTURING, 100, 0);" />
+        <field name="SpellFail" type="StringTableFieldDefinition" value="ApplyStatus(CC_RUPTURING, 100, 0);" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="HasStatus('CC_DISSOLUTION');" />
+        <field name="AmountOfTargets" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h1511d5eag70eag9eb0g37f2g98b591f81df6" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h566fd397g0588ge7e6gf377g44f8684af7c4" version="3" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(,Acid)" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(9d6, Acid)" />
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(CC_RUPTURING)" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
+        <field name="CycleConditions" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasVerbalComponent;IsAttack;IsSpell;IsHarmful" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="RemoveStatus(CC_DISSOLUTION);" />
+        <field name="Icon" type="StringTableFieldDefinition" value="CatalyticRupture_Icon" />
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Damage" enumeration_type_name="VerbalIntent" version="1" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="803e65f9-b27c-4e9c-af2a-8cf0e8e8564d" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="dfb57578-dafa-4c39-9f6e-238b9e2c237d" />
+        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="89018ece-411e-4c00-94ec-6cb3743f4af5" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

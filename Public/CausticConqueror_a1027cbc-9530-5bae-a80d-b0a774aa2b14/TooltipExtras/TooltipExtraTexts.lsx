@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="500"/>
+    <region id="TooltipExtraTexts">
+        <node id="root">
+            <children>
+                <node id="TooltipExtraTexts">
+                    <attribute id="Text" type="TranslatedString" handle="h198ca6ccgb6f8gc6aegae9cg11d4e2b0e734" version="6"/>
+                    <attribute id="UUID" type="guid" value="fe30cab0-cc18-424e-83b8-412863869304"/>
+                </node>
+                <node id="TooltipExtraTexts">
+                    <attribute id="Text" type="TranslatedString" handle="h6c44cb40g4194g50a2g6198g5ebd851723c7" version="10"/>
+                    <attribute id="UUID" type="guid" value="4feca04b-9b4d-4697-ae67-8dc873f0468d"/>
+                </node>
+                <node id="TooltipExtraTexts">
+                    <attribute id="Text" type="TranslatedString" handle="h0dae444cga490g6bcfg716bgbac75d592b30" version="2"/>
+                    <attribute id="UUID" type="guid" value="6733eb9f-b3ac-45ad-a616-ad8c39da4b0a"/>
+                </node>
+                <node id="TooltipExtraTexts">
+                    <attribute id="Text" type="TranslatedString" handle="hf8611fb3gbaf1g0cf9g513ag3cba938b3caf" version="4"/>
+                    <attribute id="UUID" type="guid" value="1a04318c-b92e-4420-9ee1-a37e5119da84"/>
+                </node>
+                <node id="TooltipExtraTexts">
+                    <attribute id="Text" type="TranslatedString" handle="h2a321bacg394aga40cg2ef1g88a9d7772ae3" version="1"/>
+                    <attribute id="UUID" type="guid" value="0c3e7c68-64e4-4601-b0e5-6763e0bc2d68"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

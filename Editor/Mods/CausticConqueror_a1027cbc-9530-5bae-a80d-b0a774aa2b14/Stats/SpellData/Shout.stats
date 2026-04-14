@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="9fd4ac7a-fad7-424f-83df-0893eae93c38">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9956c781-552e-466f-802d-2354600f17be" />
+        <field name="Name" type="NameTableFieldDefinition" value="TestHP" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="c2fb3fd6-d13e-4351-b15b-dcb709a76fe1" />
+        <field name="Level" type="IntegerTableFieldDefinition" value="0" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="100" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="ApplyStatus(TESTHP,100,-1);" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character();" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4e352d6egf03ag1d0fg41e7g8d73007138a4" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h689f94e2g3339g94b3g303cg10334cb3e5c3" version="1" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipUpcastDescriptionParams" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipPermanentWarnings" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="UseCosts" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" clear_inherited_value="true" value="" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

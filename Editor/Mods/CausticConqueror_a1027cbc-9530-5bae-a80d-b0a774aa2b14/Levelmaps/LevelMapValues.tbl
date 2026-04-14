@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="2d56f038-865d-492c-b434-c2b3e821cc13">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameTableFieldDefinition" value="AcidMissileTargets" />
+        <field name="UUID" type="IdTableFieldDefinition" value="ca239b51-42f0-4596-9b42-5d4422490dd9" />
+        <field name="Level1" type="StringTableFieldDefinition" value="3" />
+        <field name="Level2" type="StringTableFieldDefinition" value="3" />
+        <field name="Level3" type="StringTableFieldDefinition" value="4" />
+        <field name="Level4" type="StringTableFieldDefinition" value="4" />
+        <field name="Level5" type="StringTableFieldDefinition" value="5" />
+        <field name="Level6" type="StringTableFieldDefinition" value="5" />
+        <field name="Level7" type="StringTableFieldDefinition" value="6" />
+        <field name="Level8" type="StringTableFieldDefinition" value="6" />
+        <field name="Level9" type="StringTableFieldDefinition" value="7" />
+        <field name="Level10" type="StringTableFieldDefinition" value="7" />
+        <field name="Level11" type="StringTableFieldDefinition" value="8" />
+        <field name="Level12" type="StringTableFieldDefinition" value="8" />
+        <field name="Level13" type="StringTableFieldDefinition" value="8" />
+        <field name="Level14" type="StringTableFieldDefinition" value="8" />
+        <field name="Level15" type="StringTableFieldDefinition" value="8" />
+        <field name="Level16" type="StringTableFieldDefinition" value="8" />
+        <field name="Level17" type="StringTableFieldDefinition" value="8" />
+        <field name="Level18" type="StringTableFieldDefinition" value="8" />
+        <field name="Level19" type="StringTableFieldDefinition" value="8" />
+        <field name="Level20" type="StringTableFieldDefinition" value="8" />
+        <field name="Level21" type="StringTableFieldDefinition" value="8" />
+        <field name="Level22" type="StringTableFieldDefinition" value="8" />
+        <field name="Level23" type="StringTableFieldDefinition" value="8" />
+        <field name="Level24" type="StringTableFieldDefinition" value="8" />
+        <field name="Level25" type="StringTableFieldDefinition" value="8" />
+        <field name="Level26" type="StringTableFieldDefinition" value="8" />
+        <field name="Level27" type="StringTableFieldDefinition" value="8" />
+        <field name="Level28" type="StringTableFieldDefinition" value="8" />
+        <field name="Level29" type="StringTableFieldDefinition" value="8" />
+        <field name="Level30" type="StringTableFieldDefinition" value="8" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameTableFieldDefinition" value="AcidMissileDamage" />
+        <field name="UUID" type="IdTableFieldDefinition" value="ff12e5fe-8edb-4847-93c7-b51e5524fd3e" />
+        <field name="Level1" type="StringTableFieldDefinition" value="3d4" />
+        <field name="Level2" type="StringTableFieldDefinition" value="3d4" />
+        <field name="Level3" type="StringTableFieldDefinition" value="4d4" />
+        <field name="Level4" type="StringTableFieldDefinition" value="4d4" />
+        <field name="Level5" type="StringTableFieldDefinition" value="5d4" />
+        <field name="Level6" type="StringTableFieldDefinition" value="5d4" />
+        <field name="Level7" type="StringTableFieldDefinition" value="6d4" />
+        <field name="Level8" type="StringTableFieldDefinition" value="6d4" />
+        <field name="Level9" type="StringTableFieldDefinition" value="7d4" />
+        <field name="Level10" type="StringTableFieldDefinition" value="7d4" />
+        <field name="Level11" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level12" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level13" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level14" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level15" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level16" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level17" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level18" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level19" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level20" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level21" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level22" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level23" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level24" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level25" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level26" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level27" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level28" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level29" type="StringTableFieldDefinition" value="8d4" />
+        <field name="Level30" type="StringTableFieldDefinition" value="8d4" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

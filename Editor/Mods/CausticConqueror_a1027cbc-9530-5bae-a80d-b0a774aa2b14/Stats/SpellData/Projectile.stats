@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="67731907-4ad8-4be6-9326-d6f5b982140e">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d2f7f032-7c95-48e3-ae01-7cbe4b4bb0c7" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_Ruptured" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="1ababef8-c892-4130-935d-849b8eac396c" />
+        <field name="Level" type="IntegerTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" clear_inherited_value="true" value="" enumeration_type_name="SpellSchool" version="1" />
+        <field name="SpellContainerID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="6" />
+        <field name="ExplodeRadius" type="IntegerTableFieldDefinition" value="6" />
+        <field name="SpellRoll" type="StringTableFieldDefinition" value="not SavingThrow(Ability.Dexterity, 15)" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not (HasStatus('CC_RUPTURED_TECH') or HasStatus('CC_DISSOLUTION'))):DealDamage(2d8,Acid,Magical);IF(HasStatus('CC_DISSOLUTION')):ApplyStatus(CC_RUPTURING,100,0);" />
+        <field name="SpellFail" type="StringTableFieldDefinition" value="IF(not (HasStatus('CC_RUPTURED_TECH') or HasStatus('CC_DISSOLUTION'))):DealDamage(1d8,Acid,Magical);IF(HasStatus('CC_DISSOLUTION')):ApplyStatus(CC_RUPTURING,100,0);" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h47bf1786gff38g98cfg7c4dgb071411092f0" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h007e1113g2bbbgb00agdb85ga289d6d4d736" version="1" />
+        <field name="ExtraDescription" type="TranslatedStringTableFieldDefinition" handle="hf21fe1d0gde6bge307g232bg58c4b1b1fb18" version="1" />
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Dexterity" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(CC_RUPTURING,100,0)" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="TooltipUpcastDescriptionParams" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful;IsAttack" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="UseCosts" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="Distance(6);DealDamage(2d8,Acid)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f42bb29b-9c1a-4c8f-b019-43f0608dc829" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidMissile" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="caf875f1-9d04-4853-90d6-4ccecc08312f" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellRoll" type="StringTableFieldDefinition" value="not SavingThrow(Ability.Dexterity, SourceSpellDC())" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="DealDamage(1d6+1,Acid,Magical);" />
+        <field name="Trajectories" type="StringTableFieldDefinition" value="66e09d26-c027-4067-aea3-b77b7ca4090c,7bff57fa-fd21-4ab3-9384-83fb14237690" />
+        <field name="Icon" type="StringTableFieldDefinition" value="AcidMissile_Icon" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4d5c7cecg2fbbg6790g3ab1g9a9e19c7997a" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hbe7d1e10gef50g9a09gdedbg03c3d1bcd499" version="1" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6+1,Acid);3" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d6+1,Acid)" />
+        <field name="DamageType" type="EnumerationTableFieldDefinition" value="Acid" enumeration_type_name="Damage Type" version="1" />
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Dexterity" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="17173dd6-e330-4769-b6bd-d757689e7f9a" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="eb96a8c6-37b4-4a13-a622-034a1dcbee60" />
+        <field name="ExtraDescription" type="TranslatedStringTableFieldDefinition" handle="hddb26580ged1fg022bg9834g5ffe71d70cef" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4a124687-9cfe-46a5-93c9-36074f14f7f7" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidMissile_2" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f42bb29b-9c1a-4c8f-b019-43f0608dc829" />
+        <field name="AmountOfTargets" type="StringTableFieldDefinition" value="4" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:2;" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Projectile_AcidMissile" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6+1,Acid);4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="100bbb4a-3631-4526-aa22-76d4ce640c61" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidMissile_3" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4a124687-9cfe-46a5-93c9-36074f14f7f7" />
+        <field name="AmountOfTargets" type="StringTableFieldDefinition" value="5" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:3;" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6+1,Acid);5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d95e31ea-b785-4e13-bad5-4c9983c020ca" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidMissile_4" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4a124687-9cfe-46a5-93c9-36074f14f7f7" />
+        <field name="AmountOfTargets" type="StringTableFieldDefinition" value="6" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:4;" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6+1,Acid);6" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="ab1998a0-b6b2-48f9-924f-f86d2447f793" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidMissile_5" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4a124687-9cfe-46a5-93c9-36074f14f7f7" />
+        <field name="AmountOfTargets" type="StringTableFieldDefinition" value="7" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:5;" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6+1,Acid);7" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e4c6133d-6ee4-42b0-a530-0f836ad43d2e" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidMissile_6" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="4a124687-9cfe-46a5-93c9-36074f14f7f7" />
+        <field name="AmountOfTargets" type="StringTableFieldDefinition" value="8" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:6;" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6+1,Acid);8" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7832b59f-7114-4914-bb14-44862ec85dfa" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_CausticBlast" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ddcb7911-c2a6-4a6d-a3a6-e6456611feef" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="DealDamage(1d10,Acid,Magical);" />
+        <field name="Trajectories" type="StringTableFieldDefinition" value="30557c89-a101-4f97-ae0b-5a5d403060b6" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha6295415g66fbg4d4dgc1fag95c82cc032ee" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf75c1246g1ac3g0ee6g5771gdb8099f0fcd9" version="1" />
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;38cdb41c-2eec-4e03-bb31-83cff0346c35,,;85414f5f-b448-4dda-9370-1b6c4b38b561,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,," />
+        <field name="Icon" type="StringTableFieldDefinition" value="CausticBlast_Icon" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="17173dd6-e330-4769-b6bd-d757689e7f9a" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="eb96a8c6-37b4-4a13-a622-034a1dcbee60" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(1d10,Acid)" />
+        <field name="DamageType" type="EnumerationTableFieldDefinition" value="Acid" enumeration_type_name="Damage Type" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="567daa1d-d1c7-4748-a88d-566806ec680d" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidSurface_Creation" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="1ababef8-c892-4130-935d-849b8eac396c" />
+        <field name="Level" type="IntegerTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" clear_inherited_value="true" value="" enumeration_type_name="SpellSchool" version="1" />
+        <field name="SpellContainerID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="GROUND:CreateSurface(3,3,Acid);Force(.5);" />
+        <field name="SpellRoll" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="CastSound" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="650861b9-2877-4b54-9965-409483a08402" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidSurface_Creation_Sm" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="567daa1d-d1c7-4748-a88d-566806ec680d" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="GROUND:CreateSurface(1.5,3,Acid);" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

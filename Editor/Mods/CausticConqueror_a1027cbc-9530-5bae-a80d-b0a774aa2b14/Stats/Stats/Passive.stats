@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="3e76b74c-a5ae-4268-944a-aa9c31e2185e">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a4d80b55-a103-43b5-b637-73752621c236" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidSurface_Passive" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="295d151b-8ba2-4253-be74-e836622059d2" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hdf621c64gd367gb043gd80cg14f7b7f56f6d" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h1e3ff993gb0fdg8f29g67dfgebf3aa7ce790" version="3" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(,Acid);Distance(3)" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="HasDamageDoneForType(DamageType.Acid) and (IsAttack() or IsSpell() or IsCantrip()) or InSurface('SurfaceBlood') and Enemy();" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="GROUND:IF(IsHit()):CreateSurface(3,3,Acid);IF(IsHit()):ApplyStatus(CC_IN_ACID, 100, 0);" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" clear_inherited_value="true" value="" enumeration_type_name="PassiveFlags" version="1" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnAttack;OnDamage;OnSurfaceEnter;OnCast;OnCastResolved;OnPush" enumeration_type_name="StatsFunctorContext" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d2e50fac-799c-4ea7-8fdf-8994ec7abb50" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidProne_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hee63b6a6g6fa9g2ff6g79abg13f3469c8838" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h8f926fe1gd373g02c6g5e71g16ecd25e220d" version="2" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(,Acid);" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsDamageTypeAcid() and (IsSpell() or IsCantrip());" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="IF(not SavingThrow(Ability.Intelligence,14)):ApplyStatus(CC_ACID_TRIP, 100, 1);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="20aa0b98-ace4-4e3f-895c-4cd9c1a00763" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_SurfaceExposure_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hc19ea2deg0f5eg15b8g55f8g98cfeb076dd1" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h44ec2f5fg58cfg870egace0gedcaad67756f" version="5" />
+        <field name="ExtraDescription" type="TranslatedStringTableFieldDefinition" handle="hf01e4618g66afg5fa5g4fb5g08cd420da625" version="2" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsToggled;ToggledDefaultOn" enumeration_type_name="PassiveFlags" version="1" />
+        <field name="ToggleOnFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF, CC_EXPOSURE_AURA, 100, -1);" />
+        <field name="ToggleOffFunctors" type="FunctorsTableFieldDefinition" value="RemoveStatus(SELF, CC_EXPOSURE_AURA);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="02ca999f-0307-4a79-8f56-94c72d734bcd" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_Exposure_BonusDamage" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h84e96244g5a71g5b04g80c9g88e17c9780e9" version="2" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnAttacked" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="(HasDamageEffectFlag(DamageFlags.Hit) or HasDamageEffectFlag(DamageFlags.Critical)) and (IsAttack() or IsSpell() or IsCantrip());" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="DealDamage(2,Acid,Magical,,0,,true,true);" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="0ca831ca-6e27-4ca5-b070-ef68a9270e69" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_Corrosion_BonusDamage" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="02ca999f-0307-4a79-8f56-94c72d734bcd" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h719f9cd9g06eegfa47g38f0g342a0a518835" version="2" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="DealDamage(4,Acid,Magical,,0,,true,true);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="981170c0-9bdd-4942-aa00-3a45c0b26a03" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_Dissolution_BonusDamage" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="02ca999f-0307-4a79-8f56-94c72d734bcd" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h82de6a19g92c1g1638gf119ge0dfb14dfdfd" version="2" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="DealDamage(6,Acid,Magical,,0,,true,true);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9464cee2-1322-4f48-87e5-06c8fd2f4482" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_SurfaceImmunityDipping_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha15257cag34d2gbd69g0177g6a5b2a36820d" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0e0a1c02g5700gf7b7g7512gc2e5e89bba12" version="2" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsToggled;ToggledDefaultOn" enumeration_type_name="PassiveFlags" version="1" />
+        <field name="ToggleOnFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF, CC_ALLY_ACID_BUFFS_AURA, 100, -1);" />
+        <field name="ToggleOffFunctors" type="FunctorsTableFieldDefinition" value="RemoveStatus(SELF, CC_ALLY_ACID_BUFFS_AURA);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="2c44790e-affa-4754-bc01-4fab80d12269" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidDipping_Passive" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3298e680-b5c6-49e6-aa3c-05701fdedbeb" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h35cd50fbg6c78g9bcage6ffg9f8b108a6a81" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h707b712ag2238g781bg31bdg0fcb6e7c036a" version="1" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Acid)" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnTurn;OnSurfaceEnter;OnMovedDistance" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="IF(InSurface('SurfaceAcid',context.Source)):ApplyStatus(CC_WEAPON_COATED_WITH_ACID,100,-1);" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b0b60178-3aa3-4e5c-a1be-3b53db224b35" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_ChargedAcid_OnDamage_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h70f38985gf3cbga87egb2f8gbcc9b661cf2a" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h3c704d83g91a0g5c42g214bge738c9273aef" version="3" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(,Acid)" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsDamageTypeAcid() and (IsAttack() or IsSpell() or IsCantrip()) and HasDissolutionProtocolStatus(context.Target);" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF, CC_CHARGED_ACID_APPLICATION, 100, 0)" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="OncePerAttack" enumeration_type_name="PassiveFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="e55754d9-b37b-400c-bd04-70a5777a8541" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_ChargedAcid_ActionSurge_Passive" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnDamage" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsDamageTypeAcid();" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="IF(IsAcidPrimed(context.Source)):ApplyStatus(SELF, ACTION_SURGE,100,1);IF(IsAcidPrimed(context.Source)):RemoveStatus(SELF, CC_CHARGED_ACID)" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="IsHidden" enumeration_type_name="PassiveFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c6b13129-6283-433d-9dbf-89128a9e5d88" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_ChargedAcid_ReflectDamage_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h81b42cdbgee5eg6ef4ga88bgadb81ad445fe" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h8efb3d9ag903eg4aeegc4b7g67c9f70236e0" version="3" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(,Acid);DealDamage(15,Acid)" />
+        <field name="Icon" type="StringTableFieldDefinition" value="CausticCharges_Reflect_Icon" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnAttacked" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsMeleeAttack() and HasDamageEffectFlag(DamageFlags.Hit) and not SpellTypeIs(SpellType.Throw);" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="DealDamage(SWAP,5*CC_CHARGED_ACID.Duration,Acid,Magical)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d0dab8fa-7774-422b-beb1-9792b5597c5a" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_ChargedAcid_OnFailedSave_Passive" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="18625b25-fa88-4381-a9f5-cfaf1e59e85f" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_DexSaveDisadvantage_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h008bfcbag45e7g1089g5cd4gc9813fdfd839" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h63511788g239bgb077gaae1g332b4d6d6bfe" version="3" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnStatusApplied" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="IF(HasStatus('CC_CHARGED_ACID',context.Source) and not HasStatus('CC_DEX_DISADVANTAGE_AURA',context.Source)):ApplyStatus(SELF,CC_DEX_DISADVANTAGE_AURA,100,-1);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="662bbff5-04d8-462f-8f30-8e22cad236e0" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_SurfaceExposure_Quickening_Passive" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="32bcce83-65f6-4c05-8dc7-a004835e93c4" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h108526d6g0c48gccd1g2720g88fd8d0fe1fd" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h99012fdbg3dbcg6464g7ae9g4a1addaae326" version="2" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="ExtraDescription" type="TranslatedStringTableFieldDefinition" handle="hbc76d00ag9f8bg2acfgc99bge63bca467e92" version="1" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="OncePerTurn" enumeration_type_name="PassiveFlags" version="1" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnAttack;OnStatusApply" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="IF(HasStatus('CC_EXPOSURE',context.Target)):SetStatusDuration(CC_EXPOSURE,-1,Add);IF(HasStatus('CC_CORROSION',context.Target)):SetStatusDuration(CC_CORROSION,-1,Add);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="bd21c394-ff15-4005-8aa4-fb72fd3a44af" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_ChargedAcid_OnSurface_Passive" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="b0b60178-3aa3-4e5c-a1be-3b53db224b35" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hccf41836ga4d1gfe26gcd82g19a56285b828" version="1" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="OncePerTurn" enumeration_type_name="PassiveFlags" version="1" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnTurn;OnSurfaceEnter" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="InSurface('SurfaceAcid',context.Source);" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF, CC_CHARGED_ACID_APPLICATION_2, 100, 0)" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hd38883beg21f9gad1agfe5bga84e0261a315" version="1" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4b3a7588-d310-4352-9310-f1c5795aff1a" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidSpell_Free_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hf2bacccdg55cdg5620gf198g6df78bc09b01" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha4fbc209g0e6cgd882gd4d6g48260c72ef93" version="3" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="OncePerTurn" enumeration_type_name="PassiveFlags" version="1" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnTurn" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF,CC_FREE_ACID_SPELL, 100, 1)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="10f81dd1-a2ec-44e2-bfa9-d6d859b41b4b" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_ChargedAcid_FreezeDuration_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hed0d22fag4a69g7a34gf5a9gc6e0f693af75" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hba820f31g269egfb25g70b8gaf9050bbd939" version="3" />
+        <field name="Properties" type="EnumerationListTableFieldDefinition" value="OncePerTurn" enumeration_type_name="PassiveFlags" version="1" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnStatusApplied" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="HasStatus('CC_CHARGED_ACID');" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF, CC_CHARGED_ACID_FREEZE_DURATION,100,1);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="0f6943d3-7f57-46a6-8b2a-9283bf51250a" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidCantrip_Booster_Passive" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="46649602-cc7f-4f09-97ab-f0012c4b1302" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h47032bd5ga13eg70ddgbcb8g1f3723bb88d0" version="1" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="IF(IsCantrip() and SpellDamageTypeIs(DamageType.Acid)):DamageBonus(max(1,SpellCastingAbilityModifier+ProficiencyBonus));" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf379d92fgf662g2480gbab5gbe25a7f2ec70" version="1" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(,Acid);DealDamage(SpellcastingAbilityModifier+ProficiencyBonus, Bludgeoning)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="bbb3bda6-126d-43f8-b327-8d0e8b5230b4" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_AcidBlood_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h96b8c834gb565g9c09g5b86gee00ee4ea2cc" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h982dac97g7d23g0fefg4ca4g9d6d4cbc54d5" version="3" />
+        <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnDamaged;OnSurfaceEnter;OnAttacked" enumeration_type_name="StatsFunctorContext" version="1" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="(IsMeleeWeaponAttack() or IsRangedWeaponAttack() or IsUnarmedAttack()) or (IsAttack() and (HasDamageDoneForType(DamageType.Bludgeoning) or HasDamageDoneForType(DamageType.Piercing) or HasDamageDoneForType(DamageType.Slashing)) or InSurface('SurfaceBlood'));" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="GROUND:IF(IsHit()):CreateSurface(1.5,3,Acid);IF(IsHit()):ApplyStatus(CC_IN_ACID_SM, 100, 0);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="fe867694-7279-4df0-8d33-ccc605aa7084" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_SavingThrow_SpellSaveDC_Passive" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h8ad066cfg9eefg68e1g6852g4d71b6c25637" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hc25cd284ga5b0g847ag74d0ge666cb156926" version="2" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="2" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="SpellSaveDC(2);RollBonus(SavingThrow,2);" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

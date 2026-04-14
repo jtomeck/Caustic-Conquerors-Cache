@@ -1,0 +1,25 @@
+treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+new treasuretable "TUT_Chest_Potions"
+CanMerge 1
+new subtable "1,1"
+object category "I_CC_Chest",1,0,0,0,0,0,0,0
+new treasuretable "CC_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CC_Hat",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CC_Cloak",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CC_Armor",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CC_Gloves",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CC_Boots",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CC_Amulet",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CC_Ring1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CC_Ring2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CC_Quarterstaff",1,0,0,0,0,0,0,0

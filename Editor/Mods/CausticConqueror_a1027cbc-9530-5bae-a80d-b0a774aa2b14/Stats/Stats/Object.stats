@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="e078e210-b9ba-48e5-afe3-c5eb91ba8545">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c37f4712-7473-4e3f-81db-acce1092b205" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_Chest" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="98c79839-4619-4770-9222-87e2af51101e" />
+        <field name="RootTemplate" type="RootTemplateTableFieldDefinition" value="3ea77f9f-7d0c-4bc2-a697-8b2927a62d01" />
+        <field name="Unique" type="IntegerTableFieldDefinition" value="0" />
+        <field name="Rarity" type="EnumerationTableFieldDefinition" value="Legendary" enumeration_type_name="Rarity" version="1" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

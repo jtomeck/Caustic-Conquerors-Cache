@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="a1fa1d2f-c335-4902-898c-4228c3c07d52">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="c52dae9a-5755-4718-83fa-550cb90659fa" />
+        <field name="Name" type="NameTableFieldDefinition" value="CC_Quarterstaff" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="ae0f1b31-bca9-4f10-a5a4-2738f36e31a3" />
+        <field name="RootTemplate" type="RootTemplateTableFieldDefinition" value="f28daced-4cdf-458f-937c-0aa062a61166" />
+        <field name="ValueUUID" type="GuidObjectTableFieldDefinition" value="d24c441f-7ebe-4229-8522-cf34c257ff20" />
+        <field name="Rarity" type="EnumerationTableFieldDefinition" value="Legendary" enumeration_type_name="Rarity" version="1" />
+        <field name="Boosts" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="PassivesOnEquip" type="StringTableFieldDefinition" value="CC_AcidSurface_Passive;CC_AcidSurface_Tech_Passive;CC_AcidProne_Passive;" />
+        <field name="Unique" type="IntegerTableFieldDefinition" value="0" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

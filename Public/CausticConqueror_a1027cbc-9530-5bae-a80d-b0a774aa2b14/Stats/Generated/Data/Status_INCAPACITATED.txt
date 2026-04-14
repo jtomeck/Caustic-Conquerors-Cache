@@ -1,0 +1,7 @@
+new entry "CC_ACID_TRIP"
+type "StatusData"
+data "StatusType" "INCAPACITATED"
+using "CONFUSION_RAY"
+data "DisplayName" "h41c24a92g7cb4gba8cg8400g1a154cd8105d;1"
+data "Description" "h1d6b05afg78d3g4373g1f36g4e71c35ded16;1"
+
